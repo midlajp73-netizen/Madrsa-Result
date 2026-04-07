@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Madrasa Result</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>📘 Madrasa Result</h2>
+
+<input type="text" id="roll" placeholder="Enter Roll Number">
+<button onclick="getResult()">Search</button>
+
+<div id="result"></div>
+
+<script src="data.js"></script>
+<script>
+function getResult() {
+  let roll = document.getElementById("roll").value;
+  let student = results.find(r => r.roll == roll);
+
+  if(student){
+    document.getElementById("result").innerHTML =
+      `<h3>${student.name}</h3>
+       <p>Class: ${student.class}</p>
+       <p>Mark: ${student.mark}</p>`;
+  } else {
+    document.getElementById("result").innerHTML = "Result Not Found";
+  }
+}
+</script>
+
+</body>
+</html>
