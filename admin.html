@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Panel</title>
+</head>
+<body>
+
+<h2>Admin - Add Result</h2>
+
+<input id="roll" placeholder="Roll">
+<input id="name" placeholder="Name">
+<input id="class" placeholder="Class">
+<input id="mark" placeholder="Mark">
+
+<button onclick="addResult()">Add</button>
+
+<script src="firebase.js"></script>
+<script>
+function addResult(){
+  let data = {
+    roll: roll.value,
+    name: name.value,
+    class: class.value,
+    mark: mark.value
+  };
+
+  db.collection("results").doc(data.roll).set(data);
+  alert("Added!");
+}
+</script>
+
+</body>
+</html>
