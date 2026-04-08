@@ -2,13 +2,13 @@ let results = [
   {
     roll: "101",
     name: "Muhammed Fawzan",
-    class: "5",
+    class: "8",
 
     subjects: {
-      Quran: 90,
-      Arabic: 85,
-      English: 80,
-      Malayalam: 75
+      Fiqh: 90,
+      Thareeq: 85,
+      Duroos: 80,
+      Lisan: 75
     },
 
     total: 330,
@@ -20,4 +20,24 @@ let results = [
   }
 ];
 
+let results = [
+  {
+    roll: "102",
+    name: "Aman Zayan",
+    class: "8",
+
+    subjects: {
+      Fiqh: 90,
+      Thareeq: 70,
+      Duroos: 60,
+      Lisan: 75
+    },
+
+    total: 300,
+    percentage: "75.5%",
+    ajar: 134,
+
+    examDate: "10 March 2026",
+    rank: "2"
+  }
     
