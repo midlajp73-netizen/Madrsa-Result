@@ -1,8 +1,8 @@
 let results = [
   {
     roll: "101",
-    name: "Muhammed Fawzan",
-    class: "8",
+    name: "Ahmed",
+    class: "5",
 
     subjects: {
       Quran: 90,
@@ -11,25 +11,13 @@ let results = [
       Malayalam: 75
     },
 
-    total: 450,
+    total: 330,
     percentage: "82.5%",
-    ajar: 134
-  },
+    ajar: 134,
 
-  {
-    roll: "102",
-    name: "Hafsa",
-    class: "6",
-
-    subjects: {
-      Quran: 95,
-      Arabic: 88,
-      English: 84,
-      Malayalam: 80
-    },
-
-    total: 347,
-    percentage: "86.7%",
-    ajar: 140
+    examDate: "10 March 2026",
+    rank: "1"
   }
 ];
+
+    
