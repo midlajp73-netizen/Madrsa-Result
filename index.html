@@ -1,3 +1,5 @@
+<div id="result"></div>
+
 <script>
 function getResult() {
   let roll = document.getElementById("roll").value;
@@ -5,19 +7,53 @@ function getResult() {
 
   if(student){
 
-    let subjectsHTML = "";
+    let subjects = "";
     for(let sub in student.subjects){
-      subjectsHTML += `<p>${sub}: ${student.subjects[sub]}</p>`;
+      subjects += `
+        <tr>
+          <td>${sub}</td>
+          <td>${student.subjects[sub]}</td>
+        </tr>`;
     }
 
     document.getElementById("result").innerHTML =
-      `<h3>${student.name}</h3>
-       <p>Class: ${student.class}</p>
-       ${subjectsHTML}
-       <hr>
-       <p>Total: ${student.total}</p>
-       <p>Percentage: ${student.percentage}</p>
-       <p>Total Ajar: ${student.ajar}</p>`;
+    `
+    <div class="marksheet">
+
+      <div class="header">
+        <img src="logo.png" class="logo">
+        <div>
+          <h2>Darul Huda Madrasa</h2>
+          <p>Result Marksheet</p>
+        </div>
+        <img src="seal.png" class="seal">
+      </div>
+
+      <hr>
+
+      <p><b>Name:</b> ${student.name}</p>
+      <p><b>Roll No:</b> ${student.roll}</p>
+      <p><b>Class:</b> ${student.class}</p>
+
+      <table>
+        <tr>
+          <th>Subject</th>
+          <th>Mark</th>
+        </tr>
+        ${subjects}
+      </table>
+
+      <h3>Total: ${student.total}</h3>
+      <h3>Percentage: ${student.percentage}</h3>
+      <h3>Total Ajar: ${student.ajar}</h3>
+
+      <div class="footer">
+        <p>Signature</p>
+        <p>Seal</p>
+      </div>
+
+    </div>
+    `;
   } else {
     document.getElementById("result").innerHTML = "Result Not Found";
   }
