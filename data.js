@@ -1,7 +1,7 @@
 let results = [
   {
     roll: "101",
-    name: "Ahmed",
+    name: "Muhammed Fawzan",
     class: "5",
 
     subjects: {
